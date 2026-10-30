@@ -1,0 +1,19 @@
+# Go 构建产物
+bin/
+data/
+logs/
+
+# 本地配置（首次运行自动生成，可含敏感 DSN，不入库）
+configs/config.yaml
+
+# 前端构建产物（embed 唯一来源，不入库；.embedkeep 占位文件除外）
+internal/webfs/dist/*
+!internal/webfs/dist/.embedkeep
+
+# 前端依赖与本地构建残留
+web/node_modules/
+web/dist/
+
+# 本地环境与密钥
+.env
+*.local
